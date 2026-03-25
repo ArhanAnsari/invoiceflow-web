@@ -57,7 +57,7 @@ export function FeaturesSection() {
   };
 
   return (
-    <section id="features" className="py-16 sm:py-20 lg:py-24 bg-gray-50">
+    <section id="features" className="py-16 sm:py-20 lg:py-24 bg-gray-50 dark:bg-gray-900 transition-colors">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -67,10 +67,10 @@ export function FeaturesSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             Everything You Need
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             Powerful features designed for modern business management
           </p>
         </motion.div>
@@ -90,15 +90,15 @@ export function FeaturesSection() {
                 key={index}
                 variants={itemVariants}
                 whileHover={{ y: -5 }}
-                className="bg-white rounded-xl p-8 shadow-soft hover:shadow-soft-lg transition-smooth"
+                className="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-soft hover:shadow-soft-lg transition-smooth"
               >
-                <div className="w-12 h-12 bg-linear-to-r from-blue-100 to-emerald-100 rounded-lg flex items-center justify-center mb-4">
-                  <Icon className="w-6 h-6 text-blue-600" />
+                <div className="w-12 h-12 bg-linear-to-r from-blue-100 to-emerald-100 dark:from-blue-900 dark:to-emerald-900 rounded-lg flex items-center justify-center mb-4">
+                  <Icon className="w-6 h-6 text-blue-600 dark:text-blue-400" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
                   {feature.title}
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-gray-600 dark:text-gray-400">
                   {feature.description}
                 </p>
               </motion.div>

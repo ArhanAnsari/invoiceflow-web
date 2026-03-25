@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 
 export function CTASection() {
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-linear-to-r from-blue-600 via-blue-700 to-emerald-600 relative overflow-hidden">
+    <section className="py-16 sm:py-20 lg:py-24 bg-linear-to-r from-blue-600 via-blue-700 to-emerald-600 dark:from-blue-900 dark:via-blue-800 dark:to-emerald-900 relative overflow-hidden transition-colors">
       {/* Background Decorations */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full -mr-48 -mt-24"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-white/10 rounded-full -ml-48 -mb-24"></div>
@@ -19,10 +19,10 @@ export function CTASection() {
           viewport={{ once: true }}
           className="text-center"
         >
-          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl sm:text-5xl font-bold text-white dark:text-white mb-6">
             Ready to Transform Your Billing?
           </h2>
-          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-white/90 dark:text-blue-100 mb-8 max-w-2xl mx-auto">
             Join hundreds of businesses managing invoices smarter with InvoiceFlow
           </p>
 
@@ -34,14 +34,14 @@ export function CTASection() {
           >
             <Link
               href="/download"
-              className="inline-flex items-center gap-2 px-8 py-4 text-lg font-semibold text-blue-600 bg-white rounded-lg hover:bg-gray-50 transition-smooth shadow-xl hover:shadow-2xl"
+              className="inline-flex items-center gap-2 px-8 py-4 text-lg font-semibold text-blue-600 dark:text-blue-400 bg-white dark:bg-gray-900 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-smooth shadow-xl hover:shadow-2xl"
             >
               <Download size={20} />
               Download APK Now
             </Link>
           </motion.div>
 
-          <p className="text-white/80 text-sm mt-6">
+          <p className="text-white/80 dark:text-blue-200 text-sm mt-6">
             ✨ No credit card required • Completely free • Works offline
           </p>
         </motion.div>

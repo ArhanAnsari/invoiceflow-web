@@ -51,7 +51,7 @@ export function HowItWorksSection() {
   };
 
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-linear-to-b from-white to-gray-50">
+    <section className="py-16 sm:py-20 lg:py-24 bg-linear-to-b from-white to-gray-50 dark:from-gray-950 dark:to-gray-900 transition-colors">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -61,10 +61,10 @@ export function HowItWorksSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             How It Works
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             Get started in minutes with our simple setup process
           </p>
         </motion.div>
@@ -78,7 +78,7 @@ export function HowItWorksSection() {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative"
         >
           {/* Connecting Line (desktop only) */}
-          <div className="hidden lg:block absolute top-20 left-0 right-0 h-0.5 bg-linear-to-r from-transparent via-blue-300 to-transparent"></div>
+          <div className="hidden lg:block absolute top-20 left-0 right-0 h-0.5 bg-linear-to-r from-transparent via-blue-300 dark:via-blue-700 to-transparent"></div>
 
           {steps.map((step, index) => {
             const Icon = step.icon;
@@ -90,7 +90,7 @@ export function HowItWorksSection() {
               >
                 <div className="flex justify-center mb-6">
                   <div className="relative z-10 flex items-center justify-center">
-                    <div className="w-20 h-20 bg-linear-to-br from-blue-600 to-emerald-500 rounded-full flex items-center justify-center shadow-lg">
+                    <div className="w-20 h-20 bg-linear-to-br from-blue-600 to-emerald-500 dark:from-blue-500 dark:to-emerald-400 rounded-full flex items-center justify-center shadow-lg">
                       <Icon className="w-10 h-10 text-white" />
                     </div>
                     <div className="absolute -top-2 -right-2 bg-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-blue-600 border-2 border-blue-600">

@@ -111,10 +111,10 @@ export default function FeaturesPage() {
     <SectionWrapper>
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-gray-900 mb-4">
+          <h1 className="text-5xl font-bold text-gray-900 dark:text-white mb-4">
             Powerful Features
           </h1>
-          <p className="text-xl text-gray-600">
+          <p className="text-xl text-gray-600 dark:text-gray-300">
             Everything you need to manage your business invoicing efficiently
           </p>
         </div>
@@ -125,21 +125,21 @@ export default function FeaturesPage() {
             return (
               <div
                 key={index}
-                className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-soft-lg transition-smooth"
+                className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl p-8 hover:shadow-soft-lg dark:hover:shadow-soft-lg transition-smooth"
               >
-                <div className="w-12 h-12 bg-linear-to-r from-blue-100 to-emerald-100 rounded-lg flex items-center justify-center mb-6">
-                  <Icon className="w-6 h-6 text-blue-600" />
+                <div className="w-12 h-12 bg-linear-to-r from-blue-100 to-emerald-100 dark:from-blue-900 dark:to-emerald-900 rounded-lg flex items-center justify-center mb-6">
+                  <Icon className="w-6 h-6 text-blue-600 dark:text-blue-400" />
                 </div>
-                <h2 className="text-2xl font-bold text-gray-900 mb-3">
+                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
                   {feature.title}
                 </h2>
-                <p className="text-gray-600 mb-6">
+                <p className="text-gray-600 dark:text-gray-300 mb-6">
                   {feature.description}
                 </p>
                 <ul className="space-y-2">
                   {feature.details.map((detail, idx) => (
-                    <li key={idx} className="flex items-center gap-3 text-gray-700">
-                      <span className="w-2 h-2 bg-blue-600 rounded-full"></span>
+                    <li key={idx} className="flex items-center gap-3 text-gray-700 dark:text-gray-300">
+                      <span className="w-2 h-2 bg-blue-600 dark:bg-blue-400 rounded-full"></span>
                       {detail}
                     </li>
                   ))}

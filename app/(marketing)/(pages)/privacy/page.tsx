@@ -8,18 +8,18 @@ export const metadata: Metadata = {
 
 export default function PrivacyPage() {
   return (
-    <SectionWrapper className="bg-white pt-24">
+    <SectionWrapper className="bg-white dark:bg-gray-950 pt-24 transition-colors">
       <div className="max-w-3xl mx-auto">
-        <h1 className="text-4xl font-bold text-gray-900 mb-2">
+        <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-2">
           Privacy Policy
         </h1>
-        <p className="text-gray-600 mb-8">
+        <p className="text-gray-600 dark:text-gray-400 mb-8">
           Last updated: March 25, 2026
         </p>
 
-        <div className="prose prose-lg max-w-none text-gray-700 space-y-8">
+        <div className="prose prose-lg max-w-none text-gray-700 dark:text-gray-300 space-y-8">
           <div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
               1. Introduction
             </h2>
             <p>
@@ -34,13 +34,13 @@ export default function PrivacyPage() {
           </div>
 
           <div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
               2. Information Collection and Use
             </h2>
             <p>
               InvoiceFlow is an offline-first application. The majority of your data is stored locally on your device.
             </p>
-            <h3 className="text-xl font-semibold text-gray-900 mt-4 mb-2">
+            <h3 className="text-xl font-semibold text-gray-900 dark:text-white mt-4 mb-2">
               Local Data Storage
             </h3>
             <p>

@@ -8,18 +8,18 @@ export const metadata: Metadata = {
 
 export default function TermsPage() {
   return (
-    <SectionWrapper className="bg-white pt-24">
+    <SectionWrapper className="bg-white dark:bg-gray-950 pt-24 transition-colors">
       <div className="max-w-3xl mx-auto">
-        <h1 className="text-4xl font-bold text-gray-900 mb-2">
+        <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-2">
           Terms of Service
         </h1>
-        <p className="text-gray-600 mb-8">
+        <p className="text-gray-600 dark:text-gray-400 mb-8">
           Last updated: March 25, 2026
         </p>
 
-        <div className="prose prose-lg max-w-none text-gray-700 space-y-8">
+        <div className="prose prose-lg max-w-none text-gray-700 dark:text-gray-300 space-y-8">
           <div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
               1. Acceptance of Terms
             </h2>
             <p>

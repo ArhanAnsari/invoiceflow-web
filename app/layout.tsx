@@ -48,16 +48,27 @@ export default function RootLayout({
         <script
           dangerouslySetInnerHTML={{
             __html: `
-              try {
-                const theme = localStorage.getItem('invoiceflow-theme');
-                if (theme === 'dark') {
-                  document.documentElement.classList.add('dark');
-                } else if (theme === 'light') {
-                  document.documentElement.classList.remove('dark');
-                } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                  document.documentElement.classList.add('dark');
+              (function() {
+                try {
+                  const theme = localStorage.getItem('invoiceflow-theme');
+                  const html = document.documentElement;
+                  
+                  if (theme === 'dark') {
+                    html.classList.add('dark');
+                  } else if (theme === 'light') {
+                    html.classList.remove('dark');
+                  } else {
+                    // No preference set, use system preference
+                    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                      html.classList.add('dark');
+                    } else {
+                      html.classList.remove('dark');
+                    }
+                  }
+                } catch (e) {
+                  console.error('Theme initialization error:', e);
                 }
-              } catch (e) {}
+              })();
             `,
           }}
         />

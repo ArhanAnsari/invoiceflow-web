@@ -53,7 +53,7 @@ export function TestimonialsSection() {
   };
 
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-white">
+    <section className="py-16 sm:py-20 lg:py-24 bg-white dark:bg-gray-950 transition-colors">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Testimonials */}
         <motion.div
@@ -63,7 +63,7 @@ export function TestimonialsSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             Loved by Users
           </h2>
           <p className="text-xl text-gray-600">
@@ -82,7 +82,7 @@ export function TestimonialsSection() {
             <motion.div
               key={index}
               variants={itemVariants}
-              className="bg-linear-to-br from-blue-50 to-emerald-50 rounded-xl p-8 border border-white"
+              className="bg-linear-to-br from-blue-50 to-emerald-50 dark:from-gray-800 dark:to-gray-800 rounded-xl p-8 border border-white dark:border-gray-700"
             >
               <div className="flex items-start mb-4">
                 {[...Array(5)].map((_, i) => (
