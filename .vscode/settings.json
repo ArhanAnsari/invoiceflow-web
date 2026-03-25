@@ -1,0 +1,11 @@
+{
+  "css.lint.compatibleVendorPrefixes": "warning",
+  "css.lint.vendorPrefix": "warning",
+  "css.lint.duplicateProperties": "warning",
+  "css.lint.emptyRules": "warning",
+  "css.lint.importStatement": "ignore",
+  "css.lint.propertyIgnoredDueToDisplay": "warning",
+  "css.lint.universalSelector": "ignore",
+  "css.lint.unknownAtRules": "ignore"
+}
+

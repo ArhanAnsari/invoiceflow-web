@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-white text-gray-900 antialiased;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .gradient-primary {
+    @apply bg-linear-to-r from-blue-600 to-blue-700;
+  }
+
+  .gradient-secondary {
+    @apply bg-linear-to-r from-emerald-500 to-teal-600;
+  }
+
+  .gradient-accent {
+    @apply bg-linear-to-br from-blue-500 via-purple-500 to-pink-500;
+  }
+
+  .glass {
+    @apply bg-white/80 backdrop-blur-md border border-white/20;
+  }
+
+  .transition-smooth {
+    @apply transition duration-300 ease-in-out;
+  }
+
+  .text-gradient {
+    @apply bg-linear-to-r from-blue-600 to-emerald-500 bg-clip-text text-transparent;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
