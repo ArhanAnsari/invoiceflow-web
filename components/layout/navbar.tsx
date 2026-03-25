@@ -5,7 +5,6 @@ import Image from 'next/image';
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { DarkModeToggle } from '@/components/ui/dark-mode-toggle';
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -57,9 +56,8 @@ export function Navbar() {
             ))}
           </div>
 
-          {/* Desktop CTA + Theme Toggle */}
-          <div className="hidden md:flex items-center gap-4">
-            <DarkModeToggle />
+          {/* Desktop CTA */}
+          <div className="hidden md:block">
             <Link
               href="/download"
               className="inline-flex px-6 py-2 text-sm font-semibold text-white bg-linear-to-r from-blue-600 to-blue-700 rounded-lg hover:from-blue-700 hover:to-blue-800 transition-smooth shadow-lg"
@@ -96,16 +94,13 @@ export function Navbar() {
                   {item.label}
                 </Link>
               ))}
-              <div className="flex gap-4">
-                <DarkModeToggle />
-                <Link
-                  href="/download"
-                  className="flex-1 inline-flex px-6 py-2 text-sm font-semibold text-white bg-linear-to-r from-blue-600 to-blue-700 rounded-lg hover:from-blue-700 hover:to-blue-800 transition-smooth shadow-lg justify-center"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Download APK
-                </Link>
-              </div>
+              <Link
+                href="/download"
+                className="inline-flex px-6 py-2 text-sm font-semibold text-white bg-linear-to-r from-blue-600 to-blue-700 rounded-lg hover:from-blue-700 hover:to-blue-800 transition-smooth shadow-lg w-full justify-center"
+                onClick={() => setIsOpen(false)}
+              >
+                Download APK
+              </Link>
             </div>
           </motion.div>
         )}
